@@ -6,27 +6,29 @@ based on https://zhuanlan.zhihu.com/p/382699090
 
 ESI 是指针，在二维矩阵内游动，应该会有边界check，或许可以通过边界check来猜测长宽高
 
-![image-20231008161526241](C:\Users\Emma\AppData\Roaming\Typora\typora-user-images\image-20231008161526241.png)
+![width&height1](https://github.com/wBreathe/ReverseAnalysis/blob/main/dev/01saolei/images/width&height_1.png)
 
 follow in dump(memory address)发现1005334和1005338的值都是9 猜测他们对应长宽高，自定义长宽高以验证
 
-![image-20231008161712699](C:\Users\Emma\AppData\Roaming\Typora\typora-user-images\image-20231008161712699.png)
+![width&height2](https://github.com/wBreathe/ReverseAnalysis/blob/main/dev/01saolei/images/width&height_2.png)
 
 改成高24 宽17
 
-![image-20231008162209728](C:\Users\Emma\AppData\Roaming\Typora\typora-user-images\image-20231008162209728.png)
+![selfdef](https://github.com/wBreathe/ReverseAnalysis/blob/main/dev/01saolei/images/selfdefwidth&height.png)
 
-![image-20231008162242908](C:\Users\Emma\AppData\Roaming\Typora\typora-user-images\image-20231008162242908.png)
+![width&height3](https://github.com/wBreathe/ReverseAnalysis/blob/main/dev/01saolei/images/width&height_3.png)
 
-![image-20231008162348134](C:\Users\Emma\AppData\Roaming\Typora\typora-user-images\image-20231008162348134.png)
+![width&height4](https://github.com/wBreathe/ReverseAnalysis/blob/main/dev/01saolei/images/width&height_4.png)
 
 #### vstudio不能运行画图程序
 
 报错找不到符号 32和64不匹配啥的（排除了依赖的问题https://blog.csdn.net/Scoful/article/details/121516956），需要把x64换成x32，这是个32的库？
 
-![image-20231008173045487](C:\Users\Emma\AppData\Roaming\Typora\typora-user-images\image-20231008173045487.png)![image-20231008173126885](C:\Users\Emma\AppData\Roaming\Typora\typora-user-images\image-20231008173126885.png)
+![win32](https://github.com/wBreathe/ReverseAnalysis/blob/main/dev/01saolei/images/easyx_win32.png)
 
-![image-20231008173214900](C:\Users\Emma\AppData\Roaming\Typora\typora-user-images\image-20231008173214900.png)
+![win32_1](https://github.com/wBreathe/ReverseAnalysis/blob/main/dev/01saolei/images/easyx_win32_1.png)
+
+![win32_2](https://github.com/wBreathe/ReverseAnalysis/blob/main/dev/01saolei/images/easyx_win32_2.png)
 
 #### 使用多字节字符集
 
@@ -102,6 +104,6 @@ https://blog.csdn.net/weixin_47187658/article/details/126083640
 
 - 基于以上信息实现扫雷辅助程序
 
-  ![image-20231010111626174](C:\Users\Emma\AppData\Roaming\Typora\typora-user-images\image-20231010111626174.png)
+  ![pad](https://github.com/wBreathe/ReverseAnalysis/blob/main/dev/01saolei/images/padding.png)
 
   边界10之间有0f填充
